@@ -12,6 +12,13 @@ let totalExpense = 0;
 // Printing initial Total Expense in DOM
 headingTotalEl.textContent = `Total Expense: ${totalExpense}`;
 
+//Adding Service worker
+if('serviceWorker' in navigator){
+    window.addEventListener('load',() =>{
+        navigator.serviceWorker.register('/sw.js');
+    });
+}
+
 // Controller Functions
 
 //function to add expense to total expense
@@ -33,6 +40,16 @@ function addExpenseToTotal() {
 // Function to delete expense from the table
 function deleteExpenseItemFromTotal(dateValue) {
 
+    allExpenses.forEach(item => {
+        if (item.moment.valueOf() === dateValue) {
+            let pos = allExpenses.indexOf(item);
+            allExpenses.splice(pos, 1);
+            totalExpense -= item.amount;
+        }
+    });
+    totalExpenseViewer(totalExpense);
+    renderListOfExpense(allExpenses);
+
     // const newAllExpenses = allExpenses.filter((expenseObj) => {
     //     if (expenseObj.moment.valueOf() !== dateValue) {
     //         return expenseObj;
@@ -44,22 +61,11 @@ function deleteExpenseItemFromTotal(dateValue) {
     // totalExpenseViewer(totalExpense);
     // const newAllExpenses = allExpenses.filter((expenseObj) => expenseObj.moment.valueOf() !== dateValue);
     // renderListOfExpense(newAllExpenses);
-
-    allExpenses.forEach(item => {
-        if (item.moment.valueOf() === dateValue) {
-            let pos = allExpenses.indexOf(item);
-            allExpenses.splice(pos, 1);
-            totalExpense -= item.amount;
-        }
-    });
-    totalExpenseViewer(totalExpense);
-    renderListOfExpense(allExpenses);
-
 }
 //clear fieldfunction
-function clearFields(){
-    expAmountEl.value="";
-    expDescEl.value="";
+function clearFields() {
+    expAmountEl.value = "";
+    expDescEl.value = "";
 }
 // Get Date String
 function getDateString(currentmoment) {
