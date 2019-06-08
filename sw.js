@@ -2,7 +2,8 @@ const cacheName = 'cache-v1';
 const resourcesToPrecache = [
     '/',
     'index.html',
-    'expfunction.js'
+    'expfunction.js',
+    'favicon.ico'
 
 ];
 
