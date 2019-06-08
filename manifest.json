@@ -1,0 +1,14 @@
+{
+    "name": "Expense Counter",
+    "short_name": "ExpnsCounter",
+    "icons":[{
+        "src":"/image/favicon.ico",
+        "sizes":"512x512",
+        "type":"image/ico"
+    }],
+    "start_url":"/index.html",
+    "display":"standalone",
+    "orientation":"portrait",
+    "background_color":"#FF0000",
+    "theme_color":"#FF0000"
+}
