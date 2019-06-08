@@ -12,12 +12,8 @@ let totalExpense = 0;
 // Printing initial Total Expense in DOM
 headingTotalEl.textContent = `Total Expense: ${totalExpense}`;
 
-//Adding Service worker
-if('serviceWorker' in navigator){
-    window.addEventListener('load',() =>{
-        navigator.serviceWorker.register('/sw.js');
-    });
-}
+
+
 
 // Controller Functions
 
