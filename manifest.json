@@ -1,6 +1,6 @@
 {
     "name": "Expense Counter",
-    "short_name": "ExpnsCounter",
+    "short_name": "XpnsCounter",
     "icons":[{
         "src":"/image/favicon.ico",
         "sizes":"512x512",
