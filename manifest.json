@@ -2,9 +2,9 @@
     "name": "Expense Counter",
     "short_name": "XpnsCounter",
     "icons":[{
-        "src":"/image/favicon.ico",
+        "src":"/image/icon.png",
         "sizes":"512x512",
-        "type":"image/ico"
+        "type":"image/png"
     }],
     "start_url":"/index.html",
     "display":"standalone",

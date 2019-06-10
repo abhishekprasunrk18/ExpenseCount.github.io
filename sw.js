@@ -3,7 +3,8 @@ const resourcesToPrecache = [
     '/',
     'index.html',
     'expfunction.js',
-    '/image/favicon.ico'
+    '/image/favicon.ico',
+    '/image/icon.png'
 
 ];
 
