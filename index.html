@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="Expense Counter">
-    <meta name="Description" content="Author: Abhishek Prasun, Illustrator: ExpenseCounter, Category: Personal ExpenseCounter">
+    <meta name="Description"
+        content="Author: Abhishek Prasun, Illustrator: ExpenseCounter, Category: Personal ExpenseCounter">
     <meta name="theme-color" content="#DB5945">
     <title>ExpenseCounter</title>
     <link rel="shortcut icon" type="image/ico" href="/image/favicon.ico">
@@ -17,12 +18,13 @@
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
         crossorigin="anonymous"></script>
     <script>
-    //Adding Service worker
-    if('serviceWorker' in navigator){
-    window.addEventListener('load',() =>{
-        navigator.serviceWorker.register('/sw.js');
-    });
-}</script>
+        //Adding Service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -45,14 +47,14 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="spent at">@</span>
                     </div>
-                    <input type="text" class="form-control" id="expDesc" placeholder="spent On" aria-labelledby="spent On"
-                        aria-describedby="spent at" />
+                    <input type="text" class="form-control" id="expDesc" placeholder="spent On"
+                        aria-labelledby="spent On" aria-describedby="spent at" />
                     <div class="input-group-append">
                         <button class="btn btn-dark" type="button" id="btnAdd">Add</button>
                     </div>
                 </div>
             </div>
-            <hr>    
+            <hr>
             <div>
                 <ul class="list-group" id="expenseTable">
                 </ul>
